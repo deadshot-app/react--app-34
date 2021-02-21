@@ -21,7 +21,7 @@ class App extends React.Component {
   handleSubmit = (e) => {
     e.preventDefault();
     let newUser = { name: this.state.name, email: this.state.email };
-    this.setState({ users: [...this.state.users, newUser] });
+    this.setState({ users: [...this.state.users, ViewUsers] });
   };
 
   render() {
@@ -32,7 +32,7 @@ class App extends React.Component {
           type="name"
           placeholder="name"
           // onChange={(e) => this.handleEmailchange(e)}
-          value={this.state.name}
+          // value={this.state.name}
         />
         <br />
         <input
@@ -40,7 +40,7 @@ class App extends React.Component {
           type="email"
           placeholder="email"
           // onChange={(e) => this.handleEmailchange(e)}
-          value={this.state.email}
+          // value={this.state.email}
         />
         <br />
         <input type="submit" />

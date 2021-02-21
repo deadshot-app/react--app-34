@@ -11,6 +11,11 @@ class ViewUsers extends React.Component {
     return (
       <div className="App">
         <ViewUsers />
+        <div>
+          {this.state.users.map((user, index) => (
+            <ViewUsers key={index} name={user.name} email={user.email} />
+          ))}
+        </div>
       </div>
     );
   }
